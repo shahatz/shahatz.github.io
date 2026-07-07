@@ -1,0 +1,18 @@
+:root{
+--bg:#09090B;--card:#13131a;--text:#F2EAD4;--green:#ACFF58;--blue:#7B93FF;
+}
+/* CHANGE COLORS ABOVE */
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif}
+nav{position:sticky;top:0;padding:18px;background:#0b0b10cc;backdrop-filter:blur(8px);display:flex;gap:20px;justify-content:center}
+nav a{color:var(--green);text-decoration:none}
+.hero{height:100vh;display:grid;place-items:center;text-align:center}
+h1{font-size:clamp(4rem,12vw,8rem);margin:0;text-shadow:0 0 20px var(--green)}
+button{padding:12px 24px;background:transparent;border:2px solid var(--green);color:var(--green);border-radius:12px;cursor:pointer}
+button:hover,.card:hover{box-shadow:0 0 20px var(--green)}
+section{padding:70px 10%}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:var(--card);padding:20px;border-radius:18px;border:1px solid #2a2a35;transition:.25s;opacity:0;transform:translateY(30px)}
+.card.show{opacity:1;transform:none}
+footer{text-align:center;padding:30px;color:#888}
+.arcade{animation:flicker .15s infinite alternate}
+@keyframes flicker{from{filter:hue-rotate(0)}to{filter:hue-rotate(20deg)}}
